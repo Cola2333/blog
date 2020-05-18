@@ -14,6 +14,7 @@
 
   <select id="login" resultMap="BaseResultMap">
     select
+    /* 调用id为refid的sql语句 */
     <include refid="Base_Column_List" />
     from tb_admin_user
     where login_user_name = #{userName,jdbcType=VARCHAR} AND login_password=#{password,jdbcType=VARCHAR} AND locked = 0
